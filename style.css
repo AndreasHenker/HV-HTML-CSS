@@ -10,23 +10,43 @@
     url(/Examination/assests/fonts/selawksb-webfont.woff2) format("woff2");
 }
 
+/* Style all font awesome icons */
+/*from fontawesome via w3c*/
+.fa {
+    padding: 15px;
+    font-size: 1rem;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40%;
+  }
+ 
+/* YouTube */
+.fa-youtube {
+    background: red;
+    color: white;
+  }
+/* Facebook & Instagram*/
+.fa-facebook, .fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+
 /*definierar variabler för färger för att snabbare kunna testa, byta ut bilder, och felsöka*/
 :root {
-    --mainBgColor:  #ffebcd; 
-    --wrapperBgColor:  #ffebcd; 
-    --mainAreaBgColor: #dad2d2; 
+    --mainBgColor:  lightgray;
+    --mainAreaBgColor: rgb(248, 241, 241); 
     --newsletterBgColor: #f6ff00;
     --cardBgColor: #fff;
     --cardBgColorFocus: hsl(0, 5%, 95%);
-    --footBgColor: #a9a9a9;
+    --footBgColor: hwb(0 54% 29%);
     --linkColor: inherit;
     --linkBgColor: unset;
     --linkColorHover: lightgray;
     --linkBgColorHover: darkgreen;
     --priceColor: green;
-    --testColor1: red;
-    --testColor2: green;
     --logoType: url("./images/background01.jpg");
+    --inputFocusBgColor: rgb(224, 186, 182);
 }
 
 /*Nollställning av marginalerna och paddingen för samtliga element*/
@@ -47,6 +67,7 @@ body{
 /*Selawiks semibold som standard för rubrikerna*/
 h1, h2, h3, h4, h5, h6{
     font-family: "Selawik semi-bold", "Segoe UI", sans-serif;
+    margin: 10px 0;
 }
 
 h1{
@@ -151,6 +172,9 @@ a:hover, a:focus, .linkbox:hover{
     color: var(--linkColorHover);
 }
 
+input:focus {
+    background-color: var(--inputFocusBgColor);
+}
 
 /*här ska produkt-korten presenteras med jämna avstånd sinsemellan*/
 #product-window{
@@ -213,8 +237,9 @@ a:hover, a:focus, .linkbox:hover{
 
 .foot-grid-item {
     /*lite andrum inom varje element*/
-    padding: 30px 0 20px 30px; 
-    }
+    padding: 30px 0 20px 30px;
+     
+}
 
 /*tar bort punkten/siffror i listitems*/
 li {
@@ -267,4 +292,17 @@ li {
             "links"
             "info";
     }
+}
+
+.ref {
+    padding-bottom: .5rem;
+}
+
+.analys{
+    margin-top: 2rem;
+}
+
+.analys > p, .analys > h3 {
+    margin-left: 30px;
+    margin-bottom: .5rem;
 }

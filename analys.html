@@ -30,6 +30,99 @@
                 <h3>Analystext av Andreas Henker</h3>
                 <p>Examinationsuppgift i WUH100</p>
                 <time datetime="">2024-11-10</time>
+                <div  class="analys">
+                    <h2>1. Inledning</h2>
+                    <p>
+                        Uppgiften var att med hjälp av HTML och stilmallar (CSS) skapa en webbplats som till utseendet liknar en webbutik. Den djupare funktionaliteten saknas, då det huvudsakliga syftet var att visa hur man skapar en logisk, tydlig grundstruktur i HTML och en lika lättförståelig stilsättning i CSS.  
+                    </p>
+                </div>
+                <div  class="analys">
+                    <h2>2. Programmeringsval</h2>
+                    <p>Grundstrukturen bygger på tre huvudelement HEADER-MAIN-FOOTER som har två ASIDE-element som avgränsare (HEADER-ASIDE-MAIN-ASIDE-FOOTER). Samtliga element la jag till i en DIV för att kunna begränsa bredden samt sätta bakgrundsfärgen.</p>
+                    <p>I CSS-koden valde jag att jobba med variabler för främst färgerna för att bättre kunna testa och bevara enhetlighet.</p>
+                </div>
+                
+                <div  class="analys"><h3>2.1 HTML5</h3>
+                    <p>I sidans huvud (HEAD) talade jag om vilket språk (sv = svenska) och vilken sorts dokument samt enligt vilket teckenformat dokumentet ska tolkas. I största möjligha mån använde jag mig av semantiska taggar, även om en och annan DIV-förekommer.</p>
+                </div>
+                
+                <div  class="analys">
+                    <h3>2.2 CSS-reset och Box-model</h3>
+                    <p>Som CSS-reset valde jag att ta bort samtliga marginaler och paddings. Jag valde ”border-box” för att exakt kunna bestämma varje elements mått utan att behöva tänka på hur padding och border påverkar dessa, då dessa i denna modell är inräknade i totalen.</p>
+                </div>
+                
+                <div  class="analys">
+                    <h3>2.3 Enheter</h3>
+                    <p>Det flesta enheterna är ”magic numbers” i pixlar. Dessa förekommer när jag ville bestämma elementens storlek. Där text är inblandad, t.ex. i input-fält valde jag ”rem” då denna enhet är baserad på webbläsarens teckenstorlek och därför står i bättre förhållande till resten av texten. Vid ett tillfälle valde jag även den relativa enheten ”vw” som tar en procentdel av viewportens (synliga ytan) width (bredd).</p>
+                </div>
+                <div  class="analys">
+                    <h2>3. Layout</h2>
+                    <h3>3.1 Navigationselement</h3>
+                    <p>
+                        Jag valde en layout med blocken HEADER-ASIDE-MAIN-ASIDE-FOOTER.
+                        Min huvudsakliga layout använder sig av flexbox. Det är lätt att byta mellan vertikal och horisontell uppställning.
+                        Det finns navigationselement både högst upp i HEADER samt längst ner i FOOTER. Det underlättar för användaren att gå vidare eller tillbaka när man upptäcker att man kommit fel i början (HEADER) eller i slutet av sidan inser att informationen man sökt måste finnas någon annanstans.
+                    </p>
+                </div>
+                
+                <div  class="analys">
+                    <h3>3.2 Sidfot</h3>
+                    <p>Sidfoten innhåller fyra olika block med olika funktioner som kan vara olika viktiga vid olika tillfällen/skärmupplösningar. En bred skärmupplösning rymmer samtliga element bredvid varandra, men vid smalare skärmar måste man kunna välja vilket block man placerar mest synligt. Därför är grid-modellen det lämpligaste valet. Den mörka bakgrundsfärgen står i kontrast med de övriga elementen och signalerar för användaren att det här innebär en förändring, ett slut på sidans innehåll.</p>
+                </div>
+                
+                <div  class="analys"><h3>3.3 Flexbox</h3>
+                    <p>De flesta elementen är i en någorlunda fast ordning och där upplever jag flexbox som mest flexibel, särskilt när flex-elementen har någorlunda lika dimensioner. Nackdelen är dock att storleken är lite svårare att styra.</p>
+                </div>
+                <div  class="analys">
+                    <h3>3.4 CSS Grids</h3>
+                    <p>När jag ville bestämma placering och storlek av elementen, som i fallet med FOOTER-elementet, så föll mitt val på grid-modellen. Elementen har olika mycket innehåll men kan med hjälp av gridden få en exakt storlek som innehållet anpassar sig till.</p>
+                </div>
+                <div  class="analys"><h3>3.5 Läsbarhet</h3>
+                    <p>För att förtydliga för användaren vilka element, som t.ex. textfält, länkar eller produktkort som står i fokus, jag valt att lägga till en rad hover- och focus- anpassningar i CSS-koden. Dessa ändrar elementets bakgrundsfärg och i vissa fall även dess textfärg.
+                        Även de andra text- och bakgrundsfärgerna är valda med tanke på kontrasten. En utmaning var dock bakgrundsbilden i den första ASIDE.
+                        </p>
+                </div>
+                <div class="analys">
+                    <h3>3.6 Typsnit</h3>
+                    <p>Valet av typsnitt har varit given i instruktionerna. Jag valde alternativa typsnitt utifrån typsnittet Selawiks klassifikation som "sans-serif". Jag läste också att Selawik är motsvarigheten till det kommersiella typsnittet "Segoe UI" varför även detta inkluderades.</p>
+                </div>
+                <div class="analys">
+                    <h3>3.7 Radlängd</h3>
+                    <p>Radängden har inte heller varit något jag funderat på. Jag försökte lösa eventuella långa textrader i t.ex. avsnittet för nyhetsbrevet genom att istället jobba med padding och marginaler.</p>
+                </div>
+                <div  class="analys"><h2>4. Brytpunkter</h2>
+                    <p>Som brytpunkter valda jag de i utvecklarverktyget förvalda mått för skärmbredden, dvs, 768 pixel för surfplattor, 425 pixel för stora mobiltelefoner och för små mobiltelefoner en bredd på 320 pixel.
+                        Brytpunkterna underlättade placeringen av sidfotens olika element; i fallande ordning tre respektive två bredvid varandra och slutligen samtliga under varandra. Produkterna som befinner sig i en flexbox sköter sig själva.
+                        </p>
+                </div>
+                <div  class="analys"><h2>4. Bildoptimering</h2>
+                    <p>Bilderna jag valde att få med projektet är i JPG- eller PNG-format. Bilderna är högupplösta nog för att kunna representera produkterna eller tjäna som logotype för sidan. Jag förväntar mig inga större behov av att zooma in och ut ur sidan, därför valde jag bort mera skalerbara format som SVG.</p>
+                </div>
+                <div  class="analys"><h2>4. Utskrift</h2>
+                    <p>Jag ansåg att det här inte skulle vara en sida som används i annat syfte an för shopping, så utskriftsanpassningen har inte varit något jag funderat på.</p>
+                </div>
+                <div  class="analys"><h2>4. Kompatibilitet</h2>
+                    <p>I css-koden använde jag mig av variabler, främst för färger. Stödet finns i det flesta webbläsare från 2014 och framåt, undantaget är Internet Explorer och Opera Mini som båda saknar stöd och även äldre versioner av Edge har ibland svårt att hantera. </p>
+                    <p>Flex visar också sedan 2014 ett brett stöd bland webbläsarna, något förvånande får grid inget stöd förrän tidigt 2017. Båda layout verktyg är mycket central för min webbshop, men jag bedömer att bristen på stöd för grid inte är lika avgörande för sidans funktion som för flex. Man kan dock utgå ifrån att det flesta användare har en någorlunda modern mobil och datoranvändarna har förmodligen uppdaterat sin webbläsare någon gång de senaste 7 åren. </p>
+                    <p>Intressant var även att vh/vw inte stöds av åter igen Internet Explorer. I detta ser jag inget problem, då till och med Microsoft själv rekommenderar Edge framför Internet Explorer som webbläsare.</p>
+                </div>
+                <div  class="analys"><h2>4. Buggar och felaktigheter</h2>
+                    <p>Sidan kan inte klämmas ihop manuellt till mindre än 500 pixel, det funkar enbart med hjälp av utvecklingsverktygets sidofönster.</p>
+                </div>
+                <div  class="analys"><h2>4. Summering</h2>
+                        <p>Att se ett mönster eller en struktur tycker jag är ganska enkelt, så att hitta på en sorts skelett i HTML är ganska enkelt, men inte utan utmaningar, särskilt med tanke på semantisk html och tillgänglighetsaspekten. Ibland fastnar jag funderingar vilket element jag borde använda. T.ex. började jag ha paragraf som tag för länkarna i headerns navigeringselement, till slut bestämde jag mig för att göra om dem till div-taggar.</p>
+                        <p>På samma sätt var det utmanande att hitta rätt namn för taggarnas klasser och id. Det skulle ju vara lätt att förstå samtidigt som jag ville undvika att sätta klasser eller id på varje tagg, med ganska medioker framgång, tyvärr.</p>
+                        <p>Jag har försökt att jobba systematiskt och parallellt med html- och css-koden så att css-reglerna kommer så att säga samtidigt som html-koden. Det var inte heller lätt, då en förändring på ett ställe förde med sig oönskade resultat på ett annat.
+                        Design- och layout är verkligen inte min starka sida, men jag har lärt mig en hel del om vilka möjligheter det finns. Jag ser min styrka i att se sammanhang och i att hitta mönster och fundera ut lösningar på problem, så jag ser särskilt fram emot JavaScriptkursen.</p>
+                </div>
+                <div  class="analys">
+                    <h2>Referenser</h2>
+                    <ul>
+                        <li class="ref">Faraon, M. & Holmberg, L. (2022). Introduktion till HTML och CSS (upplaga 1:1). Studentlitteratur</li>
+                        <li class="ref">Stack Overflow. (2024). Stack Overflow - Where Developers Learn, Share, & Build Careers. Stack Overflow. https://stackoverflow.com/</li>
+                        <li class="ref">w3schools. (2020). W3.CSS Home. W3schools.com. https://www.w3schools.com/w3css/default.asp</li>
+                    </ul>
+                </div>
             </header>
             <section></section>
         </main>
@@ -68,9 +161,9 @@
                 <div>
                     <h3>Sociala nätverk</h3>
                     <nav>
-                        <div>YouTube</div>
-                        <div>Facebook</div>
-                        <div>Instagram</div>
+                        <div class="fa fa-facebook"></div>
+                        <div class="fa fa-youtube"></div>
+                        <div class="fa fa-instagram"></div>
                     </nav>
                 </div>
             </section>
