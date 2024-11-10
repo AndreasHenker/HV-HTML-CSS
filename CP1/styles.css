@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* annars läggs border&padding till width/height-totalstorleken */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ccc;
+}
+
+.card-1 {
+    background-color: #333;
+    color: #fff;
+    font-size: 2rem;
+    border: 10px solid blue;
+    padding: 1.5 rem;
+    margin: 20px;
+
+    width: 600px;
+}
+
+/*block*/
+.p {
+    background-color: #333;
+    color:#ccc;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/*inline*/
+.span {
+    background-color: #333;
+    color:#ccc;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.background-div {
+    height: 25vh;
+    transition: background-color 0.3s;
+    background-color: #ccc; /* Default background color */
+    color: purple;
+    transition: background-color 2s;
+}
+
+/* #dayOrNite:checked + label ~ .background-, */
+#noDayOrNite:checked .secOdd {
+    background-color: #333;
+    color: red;
+    font-size: 4rem;
+}
+
+.secOdd {
+    background-color: #a42323;
+    color: rgb(183, 255, 0);
+    font-size: 2rem;
+}
+
+#noDayOrNite {
+  display: none;
+}
+
+#dayOrNite {
+  display: none;
+}
+
+section {
+  text-align: center;
+}
+
+label {
+  font-size: 2rem;
+}
+
+#lblNite{
+  display: none;
+}
+
+#dayOrNite:checked + #lblNite {
+  display: '';
+}
+
+#lblDay{
+  display: '';
+}
+#dayOrNite:checked + #lblDay {
+  display: none;
+}
+
+
+
+/*
+checkbox style based on code by
+https://getcssscan.com/css-checkboxes-examples
+#2 by linear
+*/
+
+  .chk_wrapper .chk_lever {
+    appearance: none;
+    background-color: #333;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .chk_wrapper .chk_lever::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .chk_wrapper .chk_lever,
+  .chk_wrapper .chk_lever::after {
+    transition: all 100ms ease-out;
+  }
+
+  .chk_wrapper .chk_lever::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .chk_wrapper input[type=checkbox] {
+    cursor: default;
+  }
+
+  .chk_wrapper .chk_lever:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .chk_wrapper .chk_lever:checked {
+    background-color: #6e79d6;
+  }
+
+  .chk_wrapper .chk_lever:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  
+  .chk_wrapper :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .chk_wrapper .chk_lever:checked:hover {
+    background-color: #535db3;
+  }

@@ -1,0 +1,71 @@
+/* Både "em" och "rem" uttrycker en relativ teckenstorlek. "em" gör det i förhållande till sin parent, "rem" till roten -->"r" */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#wrapper {
+    width: 900px;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+header > img {
+    height: 100px;
+    max-width: 300px;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+header > nav > ul > li {
+    padding: 0 1rem 0 1rem;
+}
+
+article > section {
+    margin: 1rem 0 1rem 0;
+}
+
+#sidfot, aside + footer {
+    text-align: center;
+    background-color: darkgrey;
+    font-size: 2rem;
+    color: yellow;
+}
+
+.country{
+    font-style: italic;
+}
+
+.ingress{
+    font-weight: bold;
+}
+
+@media (max-width: 920px) {
+    #wrapper {
+        width: 100%
+    }
+}
+
+@media print {
+    aside, nav{
+        display: none;
+    }
+
+    body, #wrapper {
+        font-family: serif;
+    }
+    
+    p {
+        font-size: 12pt;
+    }
+}

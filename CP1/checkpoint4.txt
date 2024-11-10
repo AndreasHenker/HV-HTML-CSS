@@ -1,0 +1,46 @@
+Skapa en semantiskt korrekt sida med sidhuvud (header), huvudinnehåll (main) och en sidfot (footer). Använd lämpliga namn på filer och placera dem i mappar med lämpliga namn.
+
+I sidhuvudet ska det finnas en logotyp (bild) och en navigationsmeny (nav) med 4 påhittade länkar. Meny-länkarna skall vara horisontella. När man för muspekaren över en länk skall dess bakgrundsfärg och textfärg ändras och när man trycker på den ska textfärgen ändras till röd.
+
+Sidhuvudet, och logotypen, ska vara 80 pixlar hög. Logotypen skall placeras till vänster och menyn till höger. Använd Flexbox med ”space-between” för detta. Om du vill kan du även centrera menyn i höjdled.
+
+Under sidhuvudet skall det finnas en bild som täcker hela sidan i bredd. Denna bild skall vara 300 pixlar hög och centrerat på denna bild (både vägrätt och lodrätt) skall ditt namn stå med en h1-rubrik. Använd Flexbox för denna centrering. Bilden skall vara en bakgrundsbild. Använd en lämplig tagg för denna yta. Ovanför bilden skall det vara 30 pixlars mellanrum och under denna bild skall det vara 50 pixlars mellanrum. Välj en textfärg som ger god kontrast mot din bild.
+
+Main-delen skall upptas av 4 sektioner och layoutas med hjälp av Grid. Ge varje sektion ett unikt namn med ”grid-area”. Mellan varje sektion skall det finnas ett ”gap” om 2rem.
+
+Varje sektion skall innehålla:
+
+En rund bild. Bilden skall vara 200x200px stor och göras rund med hjälp av CSS. Om du vill kan du även centrera bilden i sin sektion.
+En rubrik bestående av 3 ord
+En ingresstext bestående av ett stycke om 30 ord i fetstil.
+2st textstycken med 30 ord vardera.
+Varje sektion skall ha en bakgrundsfärg i en ljusblå färg. Använd färgsystemet HSL för denna färg. Texten skall vara svart. Kontrast-ration på denna text skall vara minst 10.00 enligt WCAG. Du skall även i din CSS-fil skriva en kommentar om vilken kontrast-ratio du använder på just dina sektioner.
+Nederst på sidan skall en sidfot göras. Dess bakgrundsfärg skall vara mörkt grå och all text, inklusive länkar, i denna skall vara ljust gul.
+
+Använd färgsystemet HEX för dessa färger. Sidfoten skall bestå av 3st sektioner och de skall layoutas med hjälp av Grid. Ge varje sektion ett unikt namn med ”grid-area”. Se till att lämplig rubrik i varje sektion.
+
+Första sektionen ska innehålla ditt namn och en påhittad adress. Namn, adress och stad skall vara på 3 separata rader. Använd lämpliga element för att skapa detta. Adressen ska ej vara kursiv.
+Andra sektionen skall innehålla en sekundär navigation med samma mål som huvudnavigationen. Navigationen ska vara i form av en lista som är lodrät.
+Tredje sektionen ska innehålla ett textstycke med ett citat. Denna text skall vara kursiv.
+Alla rubriker på sidan skall använda fonten ”Raleway” i SemiBold från FontSquirrel. Fonten skall laddas hem från FontSquirrel och du skall skapa en @font-face-deklaration för denna font. Din deklaration av fonten skall innehålla minst .woff och .woff2-filerna. Dessa font-filer skall finnas i en mapp med namnet ”fonts”. 
+
+All annan text på sidan ska använda fonten ”Open Sans” i tjockleken Light 300. Denna font skall använda Google Fonts och inkluderas med hjälp av en @import i din CSS-fil.
+
+Du ska layouta din sida för en maximal bredd om 1300 pixlar bredd. Använd en wrapper för detta. Området utanför wrappern (body) skall vara ljusgrå.
+
+Responsiva förändringar
+När skärmbredden minskar till 1320 pixlar skall bredden på wrappern bli 100% och det ska vara 10 pixlars mellanrum mellan wrappern och dess innehåll.
+
+När skärmbredden minskar till 900 pixlar skall din main-sektion layoutas om till att bestå av 2 kolumner. Låt 2 sektioner rymmas i varje kolumn. För att inte få en scrollist runt denna brytpunkt kan du behöva ändra storleken på bilden till ett relativt mått (exempelvis %) istället för ett absolut mått (i pixlar).
+
+Dessutom skall din footer layoutas om. Sektionen med adress skall uppta hela skärmens bredd och under denna sektion ska din sekundära navigation och ditt citat uppta varsin halva av resterande utrymme.
+
+Allt layout-arbete med Grid ska använda sig av ”grid-area”.
+
+Din HTML-fil ska inte innehålla någon stilinformation (inline-css) eller storlek på bilder (width & height).
+
+I ditt HTML-dokument ska du använda <meta>-taggen som sätter ”description” till ”Checkpoint 4” och ”author” till ditt namn. Du ska dessutom använda <meta>-taggen ”viewport” och sätta dess värde till något lämpligt.
+
+Titeln på sidan ska vara ditt namn.
+
+Teckenkodningen i HTML-filen skall vara UTF-8.

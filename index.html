@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Examination">
+    <meta name="author" content="Andreas Henker">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page-wrapper"><!--Håller ihop huvudinnehållet på sidan. Har en max- och min-width  -->
+        <header class="wrapper-item"><!-- logga med navigering och sökfunktion -->
+            <img src="./images/uk.png" alt="Logotype">
+            <nav>
+                <div class="linkbox"><a href="index.html">Startsida</a></div>
+                <div class="linkbox"><a href="analys.thml">Analys</a></div>
+                <div class="linkbox"><a href="#">Herr</a></div>
+                <div class="linkbox"><a href="#">Dam</a></div>
+                <div class="linkbox"><a href="#">Unisex</a></div>
+                <div class="linkbox"><a href="#">Nyheter</a></div>
+            </nav>
+            <form><input type="search" name="searchItem" id="searchItem" placeholder="Sök produkt"></form>
+        </header>
+        <aside id="namesection" class="wrapper-item"><h1>Buy this shit</h1></aside><!-- butikens "skylt" -->
+        <main id="product-window" class="wrapper-item"><!-- butikens skyltfönster där man kan se produkterna -->
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 1">
+                <p class="stock">sista exemplaret</p>
+                <h3 class="product-name">1 produktnamn</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 2">
+                <p class="stock">20+ i lager</p>
+                <h3 class="product-name">Produkt-namn-2</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 3">
+                <p class="stock">bara 9 kvar</p>
+                <h3 class="product-name">3 produkt namn</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 4">
+                <p class="stock">12 i lager</p>
+                <h3 class="product-name">produkt-namn 4</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 5">
+                <p class="stock">20+ i lager</p>
+                <h3 class="product-name">5 produktnamn</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 6">
+                <p class="stock">20+ i lager</p>
+                <h3 class="product-name">produktnamn 6</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 7">
+                <p class="stock">20+ i lager</p>
+                <h3 class="product-name">produktnamn 7</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 8">
+                <p class="stock">bara 4 kvar</p>
+                <h3 class="product-name">produktnamn 8</h3>
+                <p class="price">pris</p>
+            </article>
+            <article class="product-card">
+                <img src="./images/shirtDump.png" alt="Skjorta produkt nummer 9">
+                <p class="stock">bara 3 kvar</p>
+                <h3 class="product-name">9 produktnamn</h3>
+                <p class="price">pris</p>
+            </article>
+        </main>
+        <aside id="newsletter" class="wrapper-item"><!-- info om fördelarna med att lämna ut sin information till företaget -->
+
+            <h2>Prenummera på nyhtesbrevet</h2>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores consectetur dolorem corrupti deserunt. Quam quia similique, nam voluptate obcaecati nostrum maiores sequi, sint reiciendis rem ipsa tenetur numquam necessitatibus quae.</p>
+            <form>
+                <input type="email" name="epost" id="epost">
+                <input type="submit" value="Prenumerera">
+            </form>
+
+        </aside>
+        <footer class="footer-grid-container wrapper-item"><!-- sidfoten som innehåller ytterligare kontaktinfo samt upprepning av länkarna från headern -->
+        <!-- de olika fälten placeras ut via ett grid-nät för att ha kontroll över ordningen i vilket fälten visas i olika media -->   
+            
+            <section id="footAddress" class="foot-grid-item">
+                <h3>Adress</h3>
+                <address>
+                    <p>Andreas Henker</p>
+                    <p>Bättringsvägen 19</p>
+                    <p>234 87 Sjuksängen</p>                    
+                </address>
+            </section>
+
+            <section id="footLinks" class="foot-grid-item">
+                <h3>Navigation</h3>
+                <nav class="foot-nav">
+                    <ul>
+                        <li class="list-link"><a href="index.html">Startsida</a></li>
+                        <li class="list-link"><a href="analys.thml">Analys</a></li>
+                        <li class="list-link"><a href="#">Herr</a></li>
+                        <li class="list-link"><a href="#">Dam</a></li>
+                        <li class="list-link"><a href="#">Unisex</a></li>
+                        <li class="list-link"><a href="#">Nyheter</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section id="footInfo" class="foot-grid-item">
+                <div>
+                    <h3>Allmän info</h3>
+                    <q>Den som väntar på något...</q>
+                </div>
+                <div>
+                    <h3>Sociala nätverk</h3>
+                    <nav>
+                        <div>YouTube</div>
+                        <div>Facebook</div>
+                        <div>Instagram</div>
+                    </nav>
+                </div>
+            </section>
+
+            <section id="footText" class="foot-grid-item">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dicta, aliquam quidem natus nostrum perspiciatis.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dicta, aliquam quidem natus nostrum perspiciatis.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dicta, aliquam quidem natus nostrum perspiciatis.</p>
+            </section>
+
+        </footer>
+    </div>
+
+</body>
+</html>

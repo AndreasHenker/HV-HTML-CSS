@@ -1,0 +1,20 @@
+Skapa en semantiskt korrekt sida med sidhuvud (header), huvudinnehåll (main) och en sidfot (footer). Filnamnet på HTML-filen skall vara ”index.html”.
+
+I sidhuvudet ska det finnas en rubrik med ditt namn och en paragraf med ett citat du väljer själv. Använd en lämplig rubriknivå.
+
+Huvudinnehållet ska innehålla 3st sektioner (section) och i varje sektion ska det finnas en rubrik och 3st paragrafer med text genererad av Lorem Ipsum. Använd lämpliga rubriknivåer.
+
+I den första sektionen ska du på lämpligt ställe även använda taggarna <em> och <strong>
+I den andra sektionen ska du även på lämpligt ställe ha med en definitionslista där 2 definitioner förklaras med dl, dt och dd.
+I den tredje sektionen ska du på lämpligt ställe även ha en länk till en tidningssida i din stad eller en närliggande stad.
+Sidfoten ska innehålla en paragraf med valfri text om cirka 5 ord.
+
+Skriv en kommentar på svenska i ditt HTML-dokument där du förklarar kort (omkring 10 ord) vad HTTPS betyder.
+
+I ditt HTML-dokument ska du använda <meta>-taggen som sätter ”description” till ”Checkpoint 1” och ”author” till ditt namn.
+
+Titeln på sidan ska vara ditt namn.
+
+Teckenkodningen i HTML-filen skall vara UTF-8.
+
+Sidan skall validera utan fel via https://validator.w3.orgLinks to an external site. 

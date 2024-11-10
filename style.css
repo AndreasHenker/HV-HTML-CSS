@@ -1,0 +1,271 @@
+/*Ladda in webbfonterna och bestämma ett namn*/
+@font-face {
+    font-family: "Selawik";
+    src: url(/Examination/assests/fonts/selawk-webfont.woff) format("woff"),
+    url(/Examination/assests/fonts/selawk-webfont.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Selawik semi-bold";
+    src: url(/Examination/assests/fonts/selawksb-webfont.woff) format("woff"),
+    url(/Examination/assests/fonts/selawksb-webfont.woff2) format("woff2");
+}
+
+/*definierar variabler för färger för att snabbare kunna testa, byta ut bilder, och felsöka*/
+:root {
+    --mainBgColor:  #ffebcd; 
+    --wrapperBgColor:  #ffebcd; 
+    --mainAreaBgColor: #dad2d2; 
+    --newsletterBgColor: #f6ff00;
+    --cardBgColor: #fff;
+    --cardBgColorFocus: hsl(0, 5%, 95%);
+    --footBgColor: #a9a9a9;
+    --linkColor: inherit;
+    --linkBgColor: unset;
+    --linkColorHover: lightgray;
+    --linkBgColorHover: darkgreen;
+    --priceColor: green;
+    --testColor1: red;
+    --testColor2: green;
+    --logoType: url("./images/uk.png");
+}
+
+/*Nollställning av marginalerna och paddingen för samtliga element*/
+/*Boxsizing för att inkludera border i boxens storlek*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Etablera Selawik som standrardfont, Segoe UI är den kommersiella varianten, både ingår i sans-serif-kategorin*/
+body{
+    font-family: "Selawik", "Segoe UI", sans-serif;
+    background-color: var(--mainBgColor);
+    display: flex;
+}
+
+/*Selawiks semibold som standard för rubrikerna och alla rubriker utom den största är anpassade efter flex-starten(left)*/
+h1, h2, h3, h4, h5, h6{
+    font-family: "Selawik semi-bold", "Segoe UI", sans-serif;
+}
+/* h2, h3, h4, h5, h6{
+    align-self: flex-start;
+} */
+
+
+/*skapa en wrapper med innehållet*/
+#page-wrapper {
+    background-color: var(--mainAreaBgColor);
+    min-width: 500px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Gör headern till flexbox där elementen vid behov börjar en ny rad*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*centrerar och passar in ipage-wrappern*/
+.wrapper-item{
+    /* border: 2px dotted var(--testColor1); */
+    width: 95%;
+    margin: 0 auto 5px auto; /*centrerar hela fönstret*/
+}
+
+/*bestämmer det allmänna utseendet för aside-delarna (newsletter och namesection*/
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*avvikande bakgrundsfärg för olika asides*/
+#namesection{
+    height: 300px;
+    background-image: var(--logoType);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#newsletter {
+    background-color: var(--newsletterBgColor);
+    padding: 80px 10vw; /*ger ett fast avstånd vertikalt och ett variabelt avstånd i sidled*/
+}
+#newletter > * {
+    text-align: left;
+}
+
+/*Alla formulär blir flexbox containers*/
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*formeterar sökelementet i headern*/
+#searchItem {
+    line-height: 2rem;
+    max-width: 250px;
+    padding-left: 3px;;
+}
+
+/*ordnar länkboxarna horisontellt, påverkar inte footerns länkar då dessa befinner sig i en lista*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+/*skapar en liten box runt navigeringslänkerna*/
+.linkbox {
+    padding: 15px 8px;
+    border: 1px solid white;
+}
+
+/*formarterar sidans samtliga länkar*/
+a {
+    color: var(--linkColor);
+    text-decoration: none;
+}
+
+/*vid "mouse over" eller i fokus ändrar bakgrundsfärgen för länkar samt för divar som innehåller länkar*/
+div:has(a):hover, div:has(a):focus, a:hover, a:focus{
+    background-color: var(--l);
+}
+
+
+/*här ska produkt-korten presenteras med jämna avstånd sinsemellan*/
+#product-window{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--mainAreaBgColor);
+}
+
+/*produktkorten*/
+.product-card{
+    margin: 0.5rem;
+    padding: 5px 0;
+    border-radius: 3px;
+    background-color: var(--cardBgColor);
+    width: 225px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 0 gray;
+}
+
+.product-card:hover, .product-card:focus {
+    background-color: var(--cardBgColorFocus);
+    position: relative;
+}
+
+/*ger produktnament lite utrymme åt vänster*/
+.product-name, .price {
+    align-self: flex-start;
+    margin-left: 7px;
+}
+
+.stock{
+    font-style: italic;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--priceColor);
+}
+
+/*formaterar footerns innehåll i ett gridnät, ger lika mycket bredd åt varje element*/
+
+#footAddress{grid-area: address;}
+#footLinks{grid-area: links;}
+#footInfo{grid-area: info;}
+#footText{grid-area: txt;}
+
+.footer-grid-container{
+    background-color: var(--footBgColor);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "txt links info address";
+    /* "txt . links" 
+    "txt address ."
+    "txt . info"; */
+    grid-gap: 10px; /*avstånd mellan gridelementen*/
+}
+
+
+.foot-grid-item {
+    padding: 0 10px; 
+    /*lite andrum inom varje element*/
+    >*{
+        margin-top: 1rem;
+    }
+    >div {background-color: aqua;}
+    >p {
+
+        background-color: coral;
+    }
+    >nav {background-color: aqua;}
+}
+
+
+/*ANPASSNINGAR TILL OLIKA SKÄRSTORLEKAR*/
+/*anpassningarna görs främst i:*/
+/* footerns grid-layout*/
+/* main-area (product-window)*/
+
+/*Tablet*/
+/*Vid cirka 1000px slår headern om till flex-column fär att få plats med alla element under varandra*/
+@media screen and (max-width:1000px){
+    #page-wrapper > header {
+        flex-direction: column;
+    }
+    #searchItem {
+        min-width: 400px;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer-grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:  
+        "txt links info"
+        "txt address .";
+    }
+}
+
+/*Mobile Big*/
+@media screen and (max-width: 425px){
+
+    .footer-grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "links info"
+            "txt address";
+    }
+}
+
+/*Mobile Small*/
+@media screen and (max-width: 320px){
+
+    .footer-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "txt"
+            "address"
+            "links"
+            "info";
+    }
+}

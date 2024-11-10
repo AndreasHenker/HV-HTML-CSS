@@ -1,0 +1,33 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Animerad bakgrund -->
+  <rect width="100%" height="100%">
+    <animate attributeName="fill" values="blue;black;yellow;black" dur="4s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Cirkel -->
+  <circle cx="75" cy="75" r="50" fill="red">
+    <animate attributeName="r" values="10;45;10" dur="9s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Rektangel -->
+  <rect x="150" y="50" width="50" height="50" fill="blue">
+    <animate attributeName="width" from="50" to="70" dur="4s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform"
+                      attributeType="XML"
+                      type="rotate"
+                      from="0 175 75"
+                      to="360 175 75"
+                      dur="12s"
+                      repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Triangel -->
+  <polygon points="75,200 25,250 125,250" fill="green">
+    <animate attributeName="points" from="75,200 25,250 125,250" to="75,220 25,270 125,270" dur="6s" repeatCount="indefinite" />
+  </polygon>
+
+  <!-- Ellips -->
+  <ellipse cx="225" cy="225" rx="40" ry="20" fill="orange">
+    <animate attributeName="rx" from="40" to="20" dur="2s" repeatCount="indefinite" />
+  </ellipse>
+</svg>

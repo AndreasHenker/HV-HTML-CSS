@@ -1,0 +1,58 @@
+Webbsidan
+Din uppgift är att göra två stycken HTML-filer. Här förklaras lite om den första av dessa sidor som är startsidan för din webbplats. 
+Gör en sida som skulle passa som en produktsida på en webbshop. Du är fri att välja de flesta saker på sidan, exempelvis:
+
+Färgtema
+Typsnitt
+Layoutsystem
+Responsiva brytpunkter
+Produktbilder
+Texter på startsidan
+Här nedan på sidan hittar du lite screenshots på hur ett färdigt resultat kan tänkas se ut i lite olika responsiva upplösningar. Dessa screenshots är inte ett facit, men ger en ganska god uppfattning om hur resultatet kan se ut.
+
+Allmäna krav:
+Sidan ska använda någon form av CSS-reset.
+Alla typsnitt på sidan skall vara woff/woff2-filer. Använd exempelvis fonten Selawik för brödtext och Selawik SemiBold för rubriker. Fonterna finns på https://www.fontsquirrel.comLinks to an external site.
+Sidan skall vara Fluid, dvs anpassa sig efter den aktuella skärmupplösningen. Du kan dock sätta en maximal bredd på 1300 pixlar. Som minsta storlek skall sidan vara lämplig ner till 500 pixlar.
+Det skall bara finns 1 CSS-fil. Om du vill kan du ha ytterligare 1 CSS-fil med en CSS-reset. Reglerna i denna fil skall organiseras så att exempelvis regler gällande header, produkter, footer osv finns samlade under var sin rubrik. Använd kommentarer för att organisera i din CSS-fil.
+Koden skall vara kommenterad, dvs du förklarar med egna ord vad som händer på olika ställen i koden. Dessa kommentarer används i bedömningen av din uppgift, så beskriv på ett bra men kortfattat sätt hur du tänkt er koden. Detta gäller både före HTML och CSS-filerna.
+Startsidan skall heta ”index.html”, analyssidan ”analys.html” och stilmallen ”style.css”. Bilder ska finnas i mappen "images" och fonter i mappen "fonts".
+Analys-sidan
+Det andra menyalternativet skall leda till HTML-sidan med din analystext. 
+
+Här diskuterar och argumenterar du kring dina olika val vad gäller kodningen av sidan och refererar till adekvat litteratur. Denna del är en stor del i betygsättningen, så se till att du ordentligt argumenterar för dina kodningsval, berättar hur du tänkt och förklarar varför du gjort som du gjort, och refererar till litteratur / webbsidor du läst som kopplar till det du skriver om. 
+
+Det är bra om du kontinuerligt i arbetet med examinationsuppgiften skriver ner dina tankar, och att du ställer dig själv frågan “varför?” när du förklarar dina kodningsval. Exempelvis kan man skriva “Jag använde mig av en ul-lista för min meny”. Sluta inte texten där, utan det är mer intressant att vi får veta varför du använde en ul-lista. Har du läst någonstans att detta är bäst sätt? Skriv då ner detta som en referens. Finns det alternativ till en ul-lista för menyn? 
+
+Använd texten som ett verktyg för att visa vad du kan och vad du har läst i ämnet. Omfattningen på denna analystext skall vara 1000-1500 ord.
+
+Argumentera dina val baserat på källor. Ha med exempel på referens till webbsidor och böcker. 
+
+Exempel på utseende och dessutom rubriker som kan vara med kan du se i bilden nedan. Återigen; det är inget facit men ger en bra uppfattning om vad du skall göra.
+
+Syfte
+Uppgiftens främsta syfte är att ge dig övning i upp-taggandet av en komplett webbplats med väl genomtänkt och korrekt HTML och CSS-kod samt att du skall kunna argumentera för dina val. Sekundärt är syftet att ge underlag för lärarna att bedöma dina kunskap inom området.
+
+Uppgiften är individuell. Detta betyder att du naturligtvis får diskutera uppgiften i forumet och be om handledning på momentet, men inlämningarna skall vara dina egna och inte någon annans.
+
+Fusk och plagiat beivras enligt Högskolan Västs riktlinjer. Se kursintroduktionsdokumentet för mer information. Har ni frågor så kontakta examinator före inlämning. Tänk på att syftet med uppgiften inte är att få godkänt, utan att lära sig.
+
+Vad bedöms inte?
+Vid bedömning av uppgiften bortser vi från tillägg av system utöver kursinnehållet som t.ex jQuery, andra typer av JavaScript och så vidare. Vi tillåter ej att man lämnar in php-filer, uppgifter skapade med olika ramverk eller andra programmeringsspråk. Vi vill ha in era egenskapade HTML- och CSS-filer samt bildmaterial.
+
+Inlämning
+Filerna packas ihop till en fil med zip, 7z eller rar och laddas upp på Canvas.
+
+Betyg & Bedömning
+Uppgiften betygsätts som Underkänd, Godkänd eller Väl Godkänd
+
+För godkänd kräver vi att du uppfyller de krav på sidan vi beskrivit ovan och att den fungerar som tänkt.
+
+För VG vill vi att du samlar på dig “pluspoäng” på de olika momenten och påvisar en djupare kunskap inom området.
+
+Exempel på pluspoäng är en utförlig beskrivning av vad du gör i koden med kommentarer, skapar läsbar och överskådlig kod. Vi vill också att din kod inte bara skall validera, utan också hålla god kvalité när det t.ex kommer till val av taggar, god användning av klasser / id:n med bra namn (semantiska) på rätt ställen, clean code. Du skall visa en förståelse för olika alternativ/vägar du kan ta i kodningen av sidan och att i kommentarer i koden visa att du förstår vad du gjort. Sidan skall visas så lika som möjligt i olika webbläsare, både den responsiva och den vanliga. Din sida har inga scrollister i sidled oavsett upplösning.
+
+Deadline
+Slutgiltig inlämning av uppgiften är enligt schema.
+Lycka till!
+
