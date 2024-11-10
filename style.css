@@ -26,7 +26,7 @@
     --priceColor: green;
     --testColor1: red;
     --testColor2: green;
-    --logoType: url("./images/uk.png");
+    --logoType: url("./images/background01.jpg");
 }
 
 /*Nollställning av marginalerna och paddingen för samtliga element*/
@@ -44,13 +44,16 @@ body{
     display: flex;
 }
 
-/*Selawiks semibold som standard för rubrikerna och alla rubriker utom den största är anpassade efter flex-starten(left)*/
+/*Selawiks semibold som standard för rubrikerna*/
 h1, h2, h3, h4, h5, h6{
     font-family: "Selawik semi-bold", "Segoe UI", sans-serif;
 }
-/* h2, h3, h4, h5, h6{
-    align-self: flex-start;
-} */
+
+h1{
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+}
 
 
 /*skapa en wrapper med innehållet*/
@@ -73,9 +76,13 @@ header{
     align-items: center;
 }
 
+.analys-column{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 /*centrerar och passar in ipage-wrappern*/
 .wrapper-item{
-    /* border: 2px dotted var(--testColor1); */
     width: 95%;
     margin: 0 auto 5px auto; /*centrerar hela fönstret*/
 }
@@ -139,8 +146,9 @@ a {
 }
 
 /*vid "mouse over" eller i fokus ändrar bakgrundsfärgen för länkar samt för divar som innehåller länkar*/
-div:has(a):hover, div:has(a):focus, a:hover, a:focus{
-    background-color: var(--l);
+a:hover, a:focus, .linkbox:hover{
+    background-color: var(--linkBgColorHover);
+    color: var(--linkColorHover);
 }
 
 
@@ -189,7 +197,6 @@ div:has(a):hover, div:has(a):focus, a:hover, a:focus{
 }
 
 /*formaterar footerns innehåll i ett gridnät, ger lika mycket bredd åt varje element*/
-
 #footAddress{grid-area: address;}
 #footLinks{grid-area: links;}
 #footInfo{grid-area: info;}
@@ -200,27 +207,19 @@ div:has(a):hover, div:has(a):focus, a:hover, a:focus{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "txt links info address";
-    /* "txt . links" 
-    "txt address ."
-    "txt . info"; */
     grid-gap: 10px; /*avstånd mellan gridelementen*/
 }
 
 
 .foot-grid-item {
-    padding: 0 10px; 
     /*lite andrum inom varje element*/
-    >*{
-        margin-top: 1rem;
+    padding: 30px 0 20px 30px; 
     }
-    >div {background-color: aqua;}
-    >p {
 
-        background-color: coral;
-    }
-    >nav {background-color: aqua;}
+/*tar bort punkten/siffror i listitems*/
+li {
+    list-style-type: none;
 }
-
 
 /*ANPASSNINGAR TILL OLIKA SKÄRSTORLEKAR*/
 /*anpassningarna görs främst i:*/
